@@ -1,0 +1,145 @@
+/* Main Styles for Search Template */
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.custom-checkbox {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.custom-checkbox:checked {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    border-color: #8b5cf6;
+}
+
+.custom-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: linear-gradient(to right, #e5e7eb 0%, #e5e7eb 100%);
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    border: 3px solid white;
+    transition: all 0.2s ease;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+}
+
+.range-slider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+.glass-effect {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Product-specific theme variations */
+.theme-esim {
+    --primary-gradient: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    --secondary-gradient: linear-gradient(135deg, #7c3aed, #2563eb);
+    --accent-color: #8b5cf6;
+    --bg-gradient: linear-gradient(to-br, #faf5ff, #eff6ff, #eef2ff);
+}
+
+.theme-hotel {
+    --primary-gradient: linear-gradient(135deg, #059669, #0891b2);
+    --secondary-gradient: linear-gradient(135deg, #047857, #0e7490);
+    --accent-color: #059669;
+    --bg-gradient: linear-gradient(to-br, #f0fdf4, #f0f9ff, #f0f9ff);
+}
+
+.theme-flight {
+    --primary-gradient: linear-gradient(135deg, #dc2626, #ea580c);
+    --secondary-gradient: linear-gradient(135deg, #b91c1c, #c2410c);
+    --accent-color: #dc2626;
+    --bg-gradient: linear-gradient(to-br, #fef2f2, #fff7ed, #fff7ed);
+}
+
+.theme-car {
+    --primary-gradient: linear-gradient(135deg, #1f2937, #374151);
+    --secondary-gradient: linear-gradient(135deg, #111827, #1f2937);
+    --accent-color: #1f2937;
+    --bg-gradient: linear-gradient(to-br, #f9fafb, #f3f4f6, #f3f4f6);
+} 

@@ -216,4 +216,4 @@ This project is open source and available under the MIT License.
 
 ## Support
 
-For support and questions, please create an issue in the repository. 
+For support and questions, please create an issue in the repository.
